@@ -70,28 +70,6 @@ document.addEventListener("click", function (event) {
 
 });
 
-
-/* =========================================================
-   5. FORMULAIRE DE CONTACT — ÉTAT HONNÊTE
-   Le formulaire n'envoie pas encore de véritable e-mail.
-========================================================= */
-
-if (contactForm && formMessage) {
-    contactForm.addEventListener("submit", function (event) {
-        event.preventDefault();
-
-        if (!contactForm.reportValidity()) {
-            return;
-        }
-
-        formMessage.textContent =
-            "Le formulaire est prêt, mais l'envoi d'e-mails doit encore être configuré.";
-
-        formMessage.style.color = "#9a6700";
-    });
-}
-
-
 /* =========================================================
    5. FORMULAIRE DE CONTACT
    Envoi via FormSubmit
