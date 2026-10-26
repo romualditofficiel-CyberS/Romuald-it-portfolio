@@ -4523,5 +4523,21 @@ textarea {
     scroll-margin-top: 86px;
 }
 
+/* Contraste des titres sur les sections claires de la page services */
+.business-page {
+    color: var(--text-dark, #102033);
+}
 
+.business-page .business-hero,
+.business-page .business-process,
+.business-page .business-service-card,
+.business-page .business-contact-card {
+    color: #f1f5f9;
+}
 
+.business-page .business-section:not(.business-process) .business-heading > p:last-child,
+.business-page .business-disclaimer,
+.business-page .business-footer-inner p {
+    color: #53657c;
+    opacity: 1;
+}
