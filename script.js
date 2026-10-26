@@ -20,55 +20,37 @@ const formMessage = document.getElementById("formMessage");
    2. MENU MOBILE
 ========================================================= */
 
-menuButton.addEventListener("click", function () {
+function closeMobileMenu() {
+    if (!navbar || !menuButton) return;
 
-    navbar.classList.toggle("open");
+    navbar.classList.remove("open");
+    menuButton.setAttribute("aria-expanded", "false");
+    menuButton.setAttribute("aria-label", "Ouvrir le menu");
+}
 
-});
-
-
-/* =========================================================
-   3. FERMER LE MENU APRÈS AVOIR CLIQUÉ SUR UN LIEN
-========================================================= */
-
-const navigationLinks =
-    document.querySelectorAll(".navbar a");
-
-
-navigationLinks.forEach(function (link) {
-
-    link.addEventListener("click", function () {
-
-        navbar.classList.remove("open");
-
+if (menuButton && navbar) {
+    menuButton.addEventListener("click", function () {
+        const isOpen = navbar.classList.toggle("open");
+        menuButton.setAttribute("aria-expanded", String(isOpen));
+        menuButton.setAttribute(
+            "aria-label",
+            isOpen ? "Fermer le menu" : "Ouvrir le menu"
+        );
     });
 
-});
+    navbar.querySelectorAll("a").forEach(function (link) {
+        link.addEventListener("click", closeMobileMenu);
+    });
 
+    document.addEventListener("click", function (event) {
+        const clickedInsideNavbar = navbar.contains(event.target);
+        const clickedMenuButton = menuButton.contains(event.target);
 
-/* =========================================================
-   4. FERMER LE MENU SI ON CLIQUE EN DEHORS
-========================================================= */
-
-document.addEventListener("click", function (event) {
-
-    const clickedInsideNavbar =
-        navbar.contains(event.target);
-
-    const clickedMenuButton =
-        menuButton.contains(event.target);
-
-
-    if (
-        !clickedInsideNavbar &&
-        !clickedMenuButton
-    ) {
-
-        navbar.classList.remove("open");
-
-    }
-
-});
+        if (!clickedInsideNavbar && !clickedMenuButton) {
+            closeMobileMenu();
+        }
+    });
+}
 
 /* =========================================================
    5. FORMULAIRE DE CONTACT
@@ -373,3 +355,4 @@ projectToggleButtons.forEach(function (button) {
 /* =========================================================
    FIN DU JAVASCRIPT
 ========================================================= */
+

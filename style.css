@@ -3934,3 +3934,594 @@ textarea {
     transition: none !important;
   }
 }
+/* ==========================================
+   ROMUALD IT — PAGE WEB CREATION
+   Styles ajoutés sans remplacer le design actuel
+========================================== */
+
+.business-page {
+    overflow-x: hidden;
+}
+
+.business-page .navbar a[aria-current="page"] {
+    color: var(--accent, #38e8a4);
+}
+
+.business-hero {
+    position: relative;
+    padding: 110px 0 90px;
+    background:
+        radial-gradient(ellipse at 85% 20%,
+            rgba(56, 232, 164, 0.10), transparent 45%),
+        var(--background, #07111f);
+}
+
+.business-hero-grid {
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 55px;
+    align-items: center;
+}
+
+.business-eyebrow {
+    color: var(--accent, #38e8a4);
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.business-hero h1 {
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    line-height: 1.1;
+    margin: 0 0 24px;
+    max-width: 760px;
+}
+
+.business-hero h1 span,
+.business-heading h2 span,
+.business-contact-card h2 span {
+    color: var(--accent, #38e8a4);
+}
+
+.business-lead {
+    max-width: 600px;
+    line-height: 1.9;
+    opacity: 0.85;
+    font-size: 1.05rem;
+}
+
+.business-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-top: 30px;
+}
+
+.business-note,
+.business-disclaimer {
+    font-size: 0.88rem;
+    line-height: 1.8;
+    opacity: 0.7;
+    margin-top: 24px;
+}
+
+.business-code-card {
+    border: 1px solid var(--border-dark, #20334c);
+    border-radius: 18px;
+    background: var(--background-card, #0d1b2e);
+    overflow: hidden;
+    box-shadow: 0 25px 70px rgba(0, 0, 0, 0.2);
+}
+
+.business-code-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 22px;
+    border-bottom: 1px solid var(--border-dark, #20334c);
+    font-size: 0.82rem;
+}
+
+.business-live-dot {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: var(--accent, #38e8a4);
+    box-shadow: 0 0 14px var(--accent, #38e8a4);
+}
+
+.business-code-body {
+    padding: 25px;
+    font-family: monospace;
+    font-size: 0.92rem;
+    line-height: 1.6;
+    overflow-wrap: anywhere;
+}
+
+.business-code-body p {
+    margin: 8px 0;
+}
+
+.business-code-body p span {
+    color: #f6c177;
+}
+
+.business-code-body .code-green,
+.business-code-body .code-result {
+    color: var(--accent, #38e8a4);
+}
+
+.business-code-body .code-indent {
+    padding-left: 20px;
+}
+
+.business-section {
+    padding: 85px 0;
+}
+
+.business-heading {
+    max-width: 700px;
+    margin-bottom: 40px;
+}
+
+.business-heading h2,
+.business-contact-card h2 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    line-height: 1.2;
+    margin-bottom: 18px;
+}
+
+.business-heading > p:last-child,
+.business-contact-card > p:not(.business-eyebrow) {
+    line-height: 1.8;
+    opacity: 0.8;
+}
+
+.business-service-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.business-service-card {
+    padding: 28px;
+    border: 1px solid var(--border-dark, #20334c);
+    border-radius: 16px;
+    background: var(--background-card, #0d1b2e);
+    transition: transform 0.25s ease, border-color 0.25s ease;
+}
+
+.business-service-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent, #38e8a4);
+}
+
+.business-card-number,
+.business-step > span {
+    color: var(--accent, #38e8a4);
+    font-weight: 800;
+    font-size: 0.85rem;
+}
+
+.business-service-card h3,
+.business-step h3 {
+    margin: 18px 0 12px;
+    font-size: 1.25rem;
+}
+
+.business-service-card p,
+.business-step p {
+    line-height: 1.8;
+    opacity: 0.8;
+}
+
+.business-tag {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 7px 10px;
+    border: 1px solid var(--border-dark, #20334c);
+    border-radius: 30px;
+    font-size: 0.78rem;
+}
+
+.business-process {
+    background: rgba(13, 27, 46, 0.45);
+}
+
+.business-steps {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.business-step {
+    padding-top: 20px;
+    border-top: 2px solid var(--accent, #38e8a4);
+}
+
+.business-contact-card {
+    max-width: 850px;
+    margin: 0 auto;
+    padding: clamp(25px, 5vw, 55px);
+    text-align: center;
+    border: 1px solid var(--border-dark, #20334c);
+    border-radius: 20px;
+    background: var(--background-card, #0d1b2e);
+}
+
+.business-contact-card .business-eyebrow {
+    margin-bottom: 16px;
+}
+
+.business-contact-card .button {
+    display: inline-flex;
+    margin-top: 20px;
+}
+
+.business-email {
+    font-size: 0.9rem;
+    opacity: 0.7;
+    overflow-wrap: anywhere;
+    margin-top: 18px;
+}
+
+.business-footer {
+    padding: 25px 0;
+    border-top: 1px solid var(--border-dark, #20334c);
+}
+
+.business-footer-inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 18px;
+}
+
+.business-footer-inner p,
+.business-footer-inner > a:last-child {
+    font-size: 0.85rem;
+}
+
+.business-footer-inner > a:last-child {
+    color: var(--accent, #38e8a4);
+}
+
+@media (max-width: 900px) {
+    .business-hero-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .business-service-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .business-steps {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 600px) {
+    .business-hero {
+        padding: 75px 0 60px;
+    }
+
+    .business-section {
+        padding: 60px 0;
+    }
+
+    .business-service-grid,
+    .business-steps {
+        grid-template-columns: 1fr;
+    }
+
+    .business-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .business-actions .button {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .business-code-body {
+        padding: 18px;
+        font-size: 0.8rem;
+    }
+
+    .business-footer-inner {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+/* Formulaire de demande business */
+
+.business-form {
+    max-width: 620px;
+    margin: 30px auto 0;
+    text-align: left;
+}
+
+.business-form-group {
+    margin-bottom: 20px;
+}
+
+.business-form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.business-form-group input,
+.business-form-group select,
+.business-form-group textarea {
+    width: 100%;
+    padding: 14px 15px;
+    color: inherit;
+    background: var(--background, #07111f);
+    border: 1px solid var(--border-dark, #20334c);
+    border-radius: 9px;
+    font: inherit;
+}
+
+.business-form-group textarea {
+    resize: vertical;
+    min-height: 130px;
+}
+
+.business-form-group input:focus,
+.business-form-group select:focus,
+.business-form-group textarea:focus {
+    outline: 2px solid var(--accent, #38e8a4);
+    outline-offset: 2px;
+}
+
+.business-form .button {
+    cursor: pointer;
+    border: 0;
+}
+
+.business-form-status {
+    margin-top: 15px;
+    line-height: 1.6;
+    overflow-wrap: anywhere;
+}
+/* =========================================
+   FORMULAIRE BUSINESS — ROMUALD IT
+========================================= */
+
+.business-form {
+    max-width: 620px;
+    margin: 30px auto 0;
+    text-align: left;
+}
+
+.business-form-group {
+    margin-bottom: 20px;
+}
+
+.business-form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.business-form-group input,
+.business-form-group select,
+.business-form-group textarea {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 14px 15px;
+    color: inherit;
+    background: var(--background, #07111f);
+    border: 1px solid var(--border-dark, #20334c);
+    border-radius: 9px;
+    font: inherit;
+}
+
+.business-form-group textarea {
+    min-height: 130px;
+    resize: vertical;
+}
+
+.business-form-group input:focus,
+.business-form-group select:focus,
+.business-form-group textarea:focus {
+    outline: 2px solid var(--accent, #38e8a4);
+    outline-offset: 2px;
+}
+
+.business-form .button {
+    cursor: pointer;
+    border: 0;
+}
+
+.business-form .button:disabled {
+    opacity: 0.6;
+    cursor: wait;
+}
+
+.business-form-status {
+    margin-top: 15px;
+    line-height: 1.6;
+    overflow-wrap: anywhere;
+}
+
+.business-form-status:empty {
+    display: none;
+}
+
+.business-contact-card .business-email a {
+    color: var(--accent, #38e8a4);
+    overflow-wrap: anywhere;
+}
+/* ==========================================
+   ROMUALD IT — LISIBILITÉ DES SERVICES
+========================================== */
+
+.business-service-card {
+    color: #f5f9fc;
+}
+
+.business-service-card h3 {
+    color: #ffffff;
+}
+
+.business-service-card p {
+    color: #c3d1e0;
+    opacity: 1;
+}
+
+.business-service-card .business-tag {
+    color: #8ef3c8;
+    border-color: rgba(56, 232, 164, 0.3);
+}
+
+/* Texte lisible dans la partie processus */
+
+.business-process {
+    color: #f5f9fc;
+}
+
+.business-process h3 {
+    color: #ffffff;
+}
+
+.business-process p {
+    color: #c3d1e0;
+    opacity: 1;
+}
+
+
+
+
+
+/* Lisibilité renforcée pour la page des services */
+.business-page {
+    color: #f1f5f9;
+}
+
+.business-page .business-lead,
+.business-page .business-heading > p:last-child,
+.business-page .business-contact-card > p:not(.business-eyebrow),
+.business-page .business-note,
+.business-page .business-disclaimer,
+.business-page .business-email,
+.business-page .business-footer-inner p {
+    color: #cbd5e1;
+    opacity: 1;
+}
+
+.business-page .business-lead,
+.business-page .business-heading > p:last-child,
+.business-page .business-contact-card > p:not(.business-eyebrow) {
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+
+.business-page .business-note,
+.business-page .business-disclaimer {
+    max-width: 75ch;
+    font-size: 0.96rem;
+    line-height: 1.75;
+}
+
+.business-page .business-code-header,
+.business-page .business-footer-inner p,
+.business-page .business-footer-inner > a:last-child {
+    font-size: 0.95rem;
+}
+
+.business-page .business-tag {
+    font-size: 0.88rem;
+}
+
+.business-page .business-email {
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+.business-page .business-form-group label {
+    color: #f1f5f9;
+    font-size: 1rem;
+}
+
+.business-page .business-form-group input,
+.business-page .business-form-group select,
+.business-page .business-form-group textarea {
+    color: #f8fafc;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.business-page .business-form-group input::placeholder,
+.business-page .business-form-group textarea::placeholder {
+    color: #aebdce;
+    opacity: 1;
+}
+
+.business-page .business-form-group select option {
+    color: #f8fafc;
+    background: #07111f;
+}
+
+.business-page .business-form-status {
+    color: #f1f5f9;
+    font-size: 1rem;
+}
+
+@media (max-width: 600px) {
+    .business-page .business-hero h1 {
+        font-size: clamp(2.25rem, 9vw, 3.2rem);
+        line-height: 1.15;
+    }
+
+    .business-page .business-lead,
+    .business-page .business-heading > p:last-child,
+    .business-page .business-contact-card > p:not(.business-eyebrow) {
+        font-size: 1rem;
+    }
+
+    .business-page .business-code-body {
+        font-size: 0.9rem;
+        line-height: 1.75;
+    }
+}
+
+.business-page .business-form-note {
+    max-width: 620px;
+    margin: 16px auto 0;
+    color: #cbd5e1;
+    font-size: 0.9rem;
+    line-height: 1.65;
+    text-align: left;
+}
+
+/* Ajustements constatés sur les captures mobiles */
+@media (max-width: 600px) {
+    .hero-container {
+        padding-left: 6%;
+        padding-right: 6%;
+    }
+
+    .hero-content {
+        min-width: 0;
+    }
+
+    .hero-small-title {
+        overflow-wrap: anywhere;
+    }
+}
+
+.section[id],
+.hero[id],
+.business-page .business-section[id] {
+    scroll-margin-top: 86px;
+}
+
+
+
